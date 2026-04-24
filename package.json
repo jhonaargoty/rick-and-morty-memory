@@ -1,0 +1,14 @@
+{
+  "name": "rick-and-morty-memory",
+  "author": "Jhonatan Argoty",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w bff\" \"npm run dev -w client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
