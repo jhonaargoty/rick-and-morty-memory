@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: calc(100vh - 80px);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: 20px;
+  padding: 56px 48px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 0 60px rgba(0, 229, 176, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.message {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.attempts {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.attemptsNumber {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.attemptsLabel {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.repeatBtn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.repeatBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.homeBtn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.homeBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
