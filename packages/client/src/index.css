@@ -5,19 +5,22 @@
 }
 
 :root {
-  --color-bg: #0a0e17;
-  --color-surface: #111827;
+  --color-bg: #1C1D3B;
+  --color-surface: #FFFAC2;
   --color-surface-2: #1a2235;
   --color-border: #1f2d45;
   --color-primary: #00e5b0;
   --color-primary-dark: #00b389;
   --color-secondary: #7c3aed;
   --color-error: #ef4444;
-  --color-text: #e2e8f0;
+  --color-text: #000000;
   --color-text-muted: #64748b;
   --color-input-bg: #0d1525;
   --color-card-back: #111827;
-  --color-card-front: #1a2235;
+  --color-card-front: #ffffff;
+  --color-border-shadow: #1A7A83;
+  --color-back-blue:#A2F2F9;
+  
 }
 
 html, body {
@@ -25,7 +28,7 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;

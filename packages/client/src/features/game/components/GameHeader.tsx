@@ -1,36 +1,20 @@
 import styles from './GameHeader.module.css'
+import header from '../../../assets/header.png'
+import logoutIcon from '../../../assets/off.png'
 
 interface GameHeaderProps {
-  attempts: number
-  matchedPairs: number
   username: string
   onLogout: () => void
 }
 
-const GameHeader = ({ attempts, matchedPairs, username, onLogout }: GameHeaderProps) => {
+
+const GameHeader = ({ username, onLogout }: GameHeaderProps) => {
   return (
     <header className={styles.header}>
-      <div className={styles.brand}>
-        <h1 className={styles.title}>Rick & Morty</h1>
-        <span className={styles.subtitle}>Memory Game</span>
-      </div>
-
-      <div className={styles.stats}>
-        <div className={styles.stat}>
-          <span className={styles.statLabel}>Turnos</span>
-          <span className={styles.statValue}>{attempts}</span>
-        </div>
-        <div className={styles.stat}>
-          <span className={styles.statLabel}>Aciertos</span>
-          <span className={styles.statValue}>{matchedPairs}</span>
-        </div>
-      </div>
-
+      <img src={header} alt="Rick and Morty" />
       <div className={styles.user}>
+        <img src={logoutIcon} alt="Logout" className={styles.logoutIcon} onClick={onLogout} />
         <span className={styles.username}>{username}</span>
-        <button className={styles.logoutBtn} onClick={onLogout}>
-          Salir
-        </button>
       </div>
     </header>
   )

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { login as loginService, saveToken } from '../../../services/authService'
 import { useAuth } from '../../../context/AuthContext'
+import logo from '../../../assets/r_m500.png'
 import styles from './LoginPage.module.css'
 
 const LoginPage = () => {
@@ -34,8 +35,11 @@ const LoginPage = () => {
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          <h1 className={styles.title}>Rick & Morty</h1>
-          <p className={styles.subtitle}>Memory Game</p>
+          <div className={styles.logoIcon}>
+            <img src={logo} alt="Rick and Morty" />
+          </div>
+
+          <p className={styles.subtitle}>Juego de memoria</p>
         </div>
 
         <form onSubmit={handleSubmit} className={styles.form}>

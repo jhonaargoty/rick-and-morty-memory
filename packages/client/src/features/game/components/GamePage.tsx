@@ -28,8 +28,6 @@ const GamePage = () => {
   return (
     <div className={styles.container}>
       <GameHeader
-        attempts={state.attempts}
-        matchedPairs={state.matchedPairs}
         username={authState.username || ''}
         onLogout={handleLogout}
       />
@@ -41,7 +39,10 @@ const GamePage = () => {
           onHome={() => navigate('/login')}
         />
       ) : (
-        <GameBoard />
+        <GameBoard 
+          attempts={state.attempts}
+          matchedPairs={state.matchedPairs}
+        />
       )}
     </div>
   )

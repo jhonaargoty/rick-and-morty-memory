@@ -1,3 +1,4 @@
+import rick from '../../../assets/rick.gif'
 import styles from './GameOver.module.css'
 
 interface GameOverProps {
@@ -10,7 +11,9 @@ const GameOver = ({ attempts, onRepeat, onHome }: GameOverProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <div className={styles.icon}>🎉</div>
+        <div className={styles.icon}>
+          <img src={rick} alt="Rick" />
+        </div>
         <h2 className={styles.title}>¡Completado!</h2>
         <p className={styles.message}>
           Encontraste todos los pares en
