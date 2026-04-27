@@ -25,7 +25,6 @@ export const useGameEngine = () => {
 
   const initGame = async () => {
     dispatch({ type: 'RESET' })
-    dispatch({ type: 'SET_PHASE', payload: 'preview' })
 
     try {
       const characters = await fetchCharacters()
@@ -33,6 +32,7 @@ export const useGameEngine = () => {
 
       const flippedCards = cards.map(c => ({ ...c, isFlipped: true }))
       dispatch({ type: 'SET_CARDS', payload: flippedCards })
+      dispatch({ type: 'SET_PHASE', payload: 'preview' })
 
       setTimeout(() => {
         const hiddenCards = cards.map(c => ({ ...c, isFlipped: false }))
@@ -42,6 +42,7 @@ export const useGameEngine = () => {
 
     } catch (error) {
       console.error('Error iniciando juego:', error)
+      dispatch({ type: 'SET_PHASE', payload: 'idle' })
     }
   }
 
