@@ -16,7 +16,7 @@ const GamePage = () => {
 
   useEffect(() => {
     if (authState.token) {
-      initGame(authState.token)
+      initGame()
     }
   }, [])
 
@@ -35,7 +35,7 @@ const GamePage = () => {
       {state.phase === 'finished' ? (
         <GameOver
           attempts={state.attempts}
-          onRepeat={() => authState.token && initGame(authState.token)}
+          onRepeat={() => authState.token && initGame()}
           onHome={() => navigate('/login')}
         />
       ) : (

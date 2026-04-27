@@ -23,12 +23,12 @@ const buildCards = (characters: Character[]): CardType[] => {
 export const useGameEngine = () => {
   const { state, dispatch } = useGame()
 
-  const initGame = async (token: string) => {
+  const initGame = async () => {
     dispatch({ type: 'RESET' })
     dispatch({ type: 'SET_PHASE', payload: 'preview' })
 
     try {
-      const characters = await fetchCharacters(token)
+      const characters = await fetchCharacters()
       const cards = buildCards(characters)
 
       const flippedCards = cards.map(c => ({ ...c, isFlipped: true }))

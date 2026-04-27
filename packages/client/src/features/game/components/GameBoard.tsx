@@ -12,6 +12,8 @@ const GameBoard = ({ attempts, matchedPairs }: GameBoardProps) => {
   const { state } = useGame()
   const { flipCard } = useGameEngine()
 
+  console.log('GameBoard render', { state, attempts, matchedPairs })
+
   if (state.phase === 'idle') {
     return (
       <div className={styles.loading}>

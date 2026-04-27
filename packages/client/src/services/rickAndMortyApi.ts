@@ -16,13 +16,9 @@ const getRandomIds = (count: number): number[] => {
   return Array.from(ids)
 }
 
-export const fetchCharacters = async (token: string): Promise<Character[]> => {
+export const fetchCharacters = async (): Promise<Character[]> => {
   const ids = getRandomIds(8)
-  const response = await fetch(`${BASE_URL}/character/${ids.join(',')}`, {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  })
+  const response = await fetch(`${BASE_URL}/character/${ids.join(',')}`)
 
   if (!response.ok) {
     throw new Error('Error al obtener personajes')
